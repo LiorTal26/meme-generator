@@ -18,3 +18,15 @@ nav {
     background: green;
     justify-content: space-between
 }
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    background-color: green;
+    text-align: center;
+}
