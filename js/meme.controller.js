@@ -132,7 +132,7 @@ function onAlignText(val) {
 // draw img - i need to get the curr img from the servies
 function drawMeme(meme) {
     var img = new Image();
-    img.src = `./imgs/imgs/${meme.selectedImgId}.jpg`;
+    img.src = `./img/${meme.selectedImgId}.jpg`;
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
         meme.lines.forEach((line) => {
@@ -162,7 +162,7 @@ function onChangeLine() {
 }
 
 
-// draw text
+
 function drawText(text, x, y, size, align, stroke, color, family) {
     gCtx.lineWidth = 2;
     gCtx.strokeStyle = `${stroke}`;
@@ -181,19 +181,6 @@ function clearCanvas() {
     gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height);
 }
 
-// // save and restore only the style settings! not the text
-
-// function saveAndRestoreExample() {
-//   gCtx.lineWidth = 2;
-//   gCtx.font = "30px Arial";
-//   gCtx.strokeStyle = "green";
-//   gCtx.strokeText("Saving the context", 10, 50);
-//   gCtx.save();
-//   gCtx.strokeStyle = "black";
-//   gCtx.strokeText("Switching to something else", 10, 100);
-//   gCtx.restore();
-//   gCtx.strokeText("Back to previous context", 10, 150);
-// }
 
 function switchContent() {
     document.querySelector(".main-gallery").hidden = true;
